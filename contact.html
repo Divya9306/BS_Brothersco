@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - B.S. Brother's</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <style>
+    .contact-section {
+      min-height: calc(100vh - 100px);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-white to-white font-sans">
+  <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+    <div class="max-w-7xl mx-auto p-6">
+      <div class="flex justify-between items-center">
+        <h1 class="text-3xl font-bold">Contact Us</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="sample.html" class="text-blue-100 hover:text-yellow-400 transition-colors duration-300 font-medium">Home</a>
+            </li>
+            <li>
+              <a href="sample.html#about" class="text-blue-100 hover:text-yellow-400 transition-colors duration-300 font-medium">About</a>
+            </li>
+            <li>
+              <a href="products.html" class="text-blue-100 hover:text-yellow-400 transition-colors duration-300 font-medium">Products</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div class="lg:w-3/5">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Get Your Free Quote Today</h2>
+          
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Name*</label>
+              <input type="text" id="name" name="name" required
+                class="mt-1 block w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number*</label>
+              <input type="tel" id="phone" name="phone" required
+                class="mt-1 block w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email*</label>
+              <input type="email" id="email" name="email" required
+                class="mt-1 block w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+            </div>
+
+            <div>
+              <label for="product" class="block text-sm font-medium text-gray-700">Product Interest*</label>
+              <select id="product" name="product" required
+                class="mt-1 block w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                <option value="">Select a product</option>
+                <option value="Gates">Gates</option>
+                <option value="Windows">Windows</option>
+                <option value="Railings">Railings</option>
+                <option value="Hoarding">Hoarding</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="project-type" class="block text-sm font-medium text-gray-700">Project Type*</label>
+              <select id="project-type" name="project-type" required
+                class="mt-1 block w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                <option value="">Select project type</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Industrial">Industrial</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message/Requirements*</label>
+              <textarea id="message" name="message" rows="4" required
+                class="mt-1 block w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
+            </div>
+
+            <div>
+              <label for="design" class="block text-sm font-medium text-gray-700">Upload Design Reference (optional)</label>
+              <input type="file" id="design" name="design" accept="image/*,.pdf"
+                class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+            </div>
+
+            <button type="submit"
+              class="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300">
+              Submit Inquiry
+            </button>
+          </form>
+
+          <div class="mt-6 flex items-center justify-center space-x-2 text-gray-600">
+            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm font-medium">We respond within 24 hours</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-2/5">
+        <div class="bg-white rounded-lg shadow-lg p-8 space-y-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <span class="text-xl">📞</span>
+              <div>
+                <h3 class="font-medium text-gray-900">Phone</h3>
+                <p class="text-gray-600">+91-8901103690</p>
+              </div>
+            </div>
+
+           
+
+            <div class="flex items-start space-x-3">
+              <span class="text-xl">🏭</span>
+              <div>
+                <h3 class="font-medium text-gray-900">Workshop Address</h3>
+                <p class="text-gray-600">Kurari Mohalla, Tagra Kali Ram, Paploha Road, Kalka, Dist. Panchkula, Haryana 133302</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <span class="text-xl">⏰</span>
+              <div>
+                <h3 class="font-medium text-gray-900">Business Hours</h3>
+                <p class="text-gray-600">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                <p class="text-gray-600">Sunday: Closed (Emergency service available)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <span class="text-xl">💬</span>
+              <div>
+                <h3 class="font-medium text-gray-900">WhatsApp</h3>
+                <p class="text-gray-600">+91-8901103690 - Quick Response</p>
+              </div>
+            </div>
+          </div>
+
+         
+          <div class="mt-6">
+            <h3 class="font-medium text-gray-900 mb-3">Our Location</h3>
+            <div class="w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d860.898169479143!2d76.92372912849666!3d30.837664098401746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f8fb25ed82647%3A0xeef9f53baa11775c!2sJ.P%20Enterprises%20%26%20B.S%20Brothers!5e1!3m2!1sen!2sin!4v1761972037784!5m2!1sen!2sin"
+                class="w-full h-64 md:h-80 rounded-lg border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+</body>
+</html>

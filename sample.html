@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manufacturing Firm - Utility Products</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <style>
+    .head {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 0;
+    }
+    .slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 320px; /* default for small screens */
+    }
+    @media (min-width: 768px) {
+      .slider { height: 520px; }
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+    .slide {
+      min-width: 100%;
+      height: 100%;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      border: none;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 30;
+      transition: background 150ms ease, transform 150ms ease;
+    }
+    .slider-btn:hover { background: rgba(0,0,0,0.6); transform: translateY(-50%) scale(1.05); }
+    .slider-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display:flex; gap:8px; z-index:30; }
+    .slider-dots button { width:10px; height:10px; border-radius:9999px; border: none; background: rgba(255,255,255,0.45); cursor:pointer; }
+    .slider-dots button.active { background: #ffffff; box-shadow: 0 0 0 4px rgba(59,130,246,0.12); }
+    .prev-btn { left: 10px; }
+    .next-btn { right: 10px; }
+  </style>
+</head>
+<body class="font-sans" style="background-image: linear-gradient(rgba(241,245,255,0.78), rgba(255,255,255,0.78)), url('welder-engineer-ss2495429543.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+
+ 
+  <header class="relative">
+  <div class="relative h-72 md:h-[520px] bg-cover bg-center" style="background-image: url('welder-engineer-ss2495429543.webp');">
+  
+      <div class="absolute inset-0 bg-blue-900/50"></div>
+      <div class="relative z-10 max-w-4xl mx-auto h-full flex flex-col justify-center items-center text-center px-4 md:px-0">
+        <h1 class="head text-white">B.S. Brother's</h1>
+        <p class="mt-3 text-base md:text-xl text-blue-100">Manufacturing &amp; Trading — Excellence in Metal Works Since 1999</p>
+        <div class="mt-6 flex gap-4">
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-5 py-3 rounded-lg shadow hover:bg-blue-700 transform transition">Get a Free Quote</a>
+          <a href="products.html" class="inline-flex items-center gap-2 bg-white text-blue-700 font-semibold px-5 py-3 rounded-lg border border-white/20 hover:bg-white/90 transition">View Products</a>
+        </div>
+      </div>
+
+     
+      <nav aria-label="Primary" class="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+        <ul class="flex items-center space-x-6 bg-white/5 backdrop-blur rounded-full px-5 py-2">
+          <li><a href="sample.html" class="text-blue-100 hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="sample.html#about" class="text-blue-100 hover:text-yellow-400 transition">About</a></li>
+          <li><a href="products.html" class="text-blue-100 hover:text-yellow-400 transition">Products</a></li>
+          <li><a href="contact.html" class="text-blue-100 hover:text-yellow-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    .head {
+      font-size: 3.5em;
+      font-weight: bold;
+      margin: 0;
+      background: linear-gradient(to right, #ffffff, #e2e8f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .head:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+
+
+  <section class="my-6 mx-auto max-w-6xl px-4">
+    <div class="slider relative rounded">
+      <div class="slides">
+       
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="replacing-steel-windows.jpg" alt="Gate" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="modern-ss-gate-500x500.jpg" alt="Window" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="product-jpeg-500x500.webp" alt="Industrial Welding" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="ss-gate-500x500.webp" alt="Industrial Welding" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="be7caf4d-b780-4bf7-83a8-50a59bc19a3c-500x500.jpg" alt="Industrial Welding" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="steel-window-500x500.jpg" alt="Industrial Welding" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="hoarding-structure.jpg" alt="Industrial Welding" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="mild-steel-hoarding-structure.jpg" alt="Industrial Welding" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+        <div class="slide flex items-center justify-center bg-transparent">
+          <img src="unipolar-hoarding-500x500.webp" alt="Industrial Welding" class="object-contain object-center w-auto max-w-full max-h-full" />
+        </div>
+
+      </div>
+      <button class="slider-btn prev-btn" aria-label="Previous">&#10094;</button>
+      <button class="slider-btn next-btn" aria-label="Next">&#10095;</button>
+      <div class="slider-dots" aria-hidden="false"></div>
+    </div>
+  </section>
+
+
+  <section id="about" class="max-w-4xl mx-auto bg-white rounded shadow p-6 my-10">
+    <h2 class="text-2xl font-bold mb-4">About Us</h2>
+    <p class="text-gray-700">B.S. Brother's is a leading manufacturer of custom steel and iron 
+utility products, serving residential, commercial, and industrial 
+clients across Haryana. 
+
+Founded in 1999, we've built our reputation on three pillars: 
+exceptional craftsmanship, reliable service, and innovative design 
+solutions. Our state-of-the-art fabrication facility combines 
+traditional metalworking expertise with modern welding technology 
+to deliver products that exceed industry standards.
+
+From intricate decorative gates to heavy-duty industrial hoarding 
+boards, every piece we create reflects our commitment to precision, 
+durability, and aesthetic excellence.
+</p>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="max-w-4xl mx-auto bg-white rounded shadow p-6 my-6">
+    <h2 class="text-2xl font-bold mb-6">Why Businesses Trust Us</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0 mt-1">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 5-3.6 9.7-7 11-3.4-1.3-7-6-7-11V6l7-4z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold">Custom Design Solutions</h3>
+          <p class="text-sm text-gray-600">Every project tailored to your exact specifications</p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0 mt-1">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 5-3.6 9.7-7 11-3.4-1.3-7-6-7-11V6l7-4z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold">Premium Materials</h3>
+          <p class="text-sm text-gray-600">Grade A stainless steel, MS steel, and wrought iron</p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0 mt-1">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 5-3.6 9.7-7 11-3.4-1.3-7-6-7-11V6l7-4z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold">Expert Craftsmanship</h3>
+          <p class="text-sm text-gray-600">Certified welders with 15+ years experience</p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0 mt-1">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 5-3.6 9.7-7 11-3.4-1.3-7-6-7-11V6l7-4z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold">On-Time Delivery</h3>
+          <p class="text-sm text-gray-600">Reliable installation within agreed timelines</p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0 mt-1">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 5-3.6 9.7-7 11-3.4-1.3-7-6-7-11V6l7-4z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold">Competitive Pricing</h3>
+          <p class="text-sm text-gray-600">Quality products without breaking your budget</p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0 mt-1">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 5-3.6 9.7-7 11-3.4-1.3-7-6-7-11V6l7-4z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold">After-Sales Support</h3>
+          <p class="text-sm text-gray-600">Maintenance and warranty services included</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+
+<section class="max-w-4xl mx-auto mb-10">
+  <h2 class="text-2xl font-bold mb-4">Our Products</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+   
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="modern-ss-gate-500x500.jpg" class="rounded mb-2 w-full h-32 object-contain object-center" alt="Gate">
+      <h3 class="font-bold mb-1">Modern Iron Gate</h3>
+      <p class="text-sm text-gray-600">Sturdy gates built for maximum security and style.</p>
+    </a>
+
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="ss-gate-500x500.webp" class="rounded mb-2 w-full h-32 object-contain object-center" alt="Window">
+        <h3 class="font-bold mb-1">Modern Iron Gate</h3>
+        <p class="text-sm text-gray-600">Sturdy gates built for maximum security and style..</p>
+    </a>
+
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="be7caf4d-b780-4bf7-83a8-50a59bc19a3c-500x500.jpg" class="rounded mb-2 w-full h-32 object-contain object-center" alt="Gate">
+      <h3 class="font-bold mb-1">Modern Iron Gate</h3>
+      <p class="text-sm text-gray-600">Sturdy gates built for maximum security and style.</p>
+    </a>
+
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="steel-window-500x500.jpg" class="rounded mb-2 w-full h-32 object-contain object-center" alt="Window">
+      <h3 class="font-bold mb-1">Steel Windows</h3>
+      <p class="text-sm text-gray-600">Custom windows with precision welding for every environment.</p>
+    </a>
+
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="replacing-steel-windows.jpg" class="rounded mb-2 w-full h-32 object-contain object-center" alt="Window">
+      <h3 class="font-bold mb-1">Steel Windows</h3>
+      <p class="text-sm text-gray-600">Custom windows with precision welding for every environment.</p>
+    </a>
+
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="hoarding-structure.jpg" class="rounded mb-2 w-full h-32 object-contain object-center" alt="hoarding">
+      <h3 class="font-bold mb-1">Steel Windows</h3>
+      <p class="text-sm text-gray-600">Custom hoarding boards with precision welding for every environment.</p>
+    </a>
+
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="mild-steel-hoarding-structure.jpg" class="rounded mb-2 w-full h-32 object-contain object-center" alt="hoarding">
+      <h3 class="font-bold mb-1">Steel Windows</h3>
+      <p class="text-sm text-gray-600">Custom hoarding boards with precision welding for every environment.</p>
+    </a>
+
+    <a href="products.html" class="bg-white rounded shadow p-4 hover:shadow-lg transition block">
+  <img src="unipolar-hoarding-500x500.webp" class="rounded mb-2 w-full h-32 object-contain object-center" alt="hoarding">
+      <h3 class="font-bold mb-1">Steel Windows</h3>
+      <p class="text-sm text-gray-600">Custom hoarding boards with precision welding for every environment.</p>
+    </a>
+  </div>
+</section>
+
+
+  <script>
+    $(document).ready(function() {
+      let currentIndex = 0;
+      const $slides = $('.slides');
+      const $slide = $('.slide');
+      const totalSlides = $slide.length;
+      const $dotsContainer = $('.slider-dots');
+      let autoplayTimer = null;
+
+      function showSlide(index) {
+        $slides.css('transform', 'translateX(' + (-index * 100) + '%)');
+        $dotsContainer.find('button').removeClass('active');
+        $dotsContainer.find('button').eq(index).addClass('active');
+      }
+
+      // create dots
+      for (let i = 0; i < totalSlides; i++) {
+        const $dot = $('<button>').attr('data-index', i).on('click', function() {
+          currentIndex = Number($(this).attr('data-index'));
+          showSlide(currentIndex);
+        });
+        $dotsContainer.append($dot);
+      }
+
+      $('.next-btn').click(function() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      });
+
+      $('.prev-btn').click(function() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+      });
+
+      function startAutoplay() {
+        stopAutoplay();
+        autoplayTimer = setInterval(function() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          showSlide(currentIndex);
+        }, 4000);
+      }
+
+      function stopAutoplay() {
+        if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+      }
+
+      // pause on hover
+      $('.slider').on('mouseenter', stopAutoplay).on('mouseleave', startAutoplay);
+
+      // initialize
+      showSlide(0);
+      startAutoplay();
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="mt-12 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold">B.S. Brother's</h3>
+          <p class="mt-3 text-blue-100">Premium metal fabrication — gates, windows, railings and industrial structures. Built with precision and delivered on time.</p>
+          <div class="mt-4 space-y-2 text-sm text-blue-100">
+            <div>📞 <a href="tel:+9108901103690" class="hover:underline">+91-8901103690</a></div>
+            <div>📧 <a href="mailto:info@yourcompany.com" class="hover:underline">bsbrothers72@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xl font-semibold">Quick Links</h4>
+          <ul class="mt-4 space-y-2 text-blue-100">
+            <li><a href="sample.html" class="hover:text-yellow-400">Home</a></li>
+            <li><a href="sample.html#about" class="hover:text-yellow-400">About</a></li>
+            <li><a href="products.html" class="hover:text-yellow-400">Products</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xl font-semibold">Visit Us</h4>
+          <p class="mt-4 text-blue-100">Kurari Mohalla, Tagra Kali Ram, Paploha Road, Kalka, Dist. Panchkula, Haryana 133302</p>
+          <div class="mt-4 text-blue-100">
+            <div class="font-medium">Business Hours</div>
+            <div class="text-sm">Mon - Sat: 9:00 AM - 7:00 PM</div>
+            <div class="text-sm">Sun: Closed (Emergency service available)</div>
+          </div>
+         
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-blue-100">
+        <div>© <span id="year"></span> B.S. Brother's. All rights reserved.</div>
+        <div class="mt-3 md:mt-0">Made with ♥︎ — <a href="sample.html#about" class="hover:text-yellow-400">Learn more about us</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
